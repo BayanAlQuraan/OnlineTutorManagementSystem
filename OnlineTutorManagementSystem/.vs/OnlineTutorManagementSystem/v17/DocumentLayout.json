@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\m.quraan\\Desktop\\Bayan\\OnlineTutorManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09916E85-DE8E-42F1-9E3D-344170DF7B5D}|OnlineTutorManagementSystem.csproj|c:\\users\\m.quraan\\desktop\\bayan\\onlinetutormanagementsystem\\controllers\\teacherservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09916E85-DE8E-42F1-9E3D-344170DF7B5D}|OnlineTutorManagementSystem.csproj|solutionrelative:controllers\\teacherservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09916E85-DE8E-42F1-9E3D-344170DF7B5D}|OnlineTutorManagementSystem.csproj|c:\\users\\m.quraan\\desktop\\bayan\\onlinetutormanagementsystem\\controllers\\teacherreposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09916E85-DE8E-42F1-9E3D-344170DF7B5D}|OnlineTutorManagementSystem.csproj|solutionrelative:controllers\\teacherreposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeacherServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\m.quraan\\Desktop\\Bayan\\OnlineTutorManagementSystem\\Controllers\\TeacherServiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeacherServiceController.cs",
+              "ToolTip": "C:\\Users\\m.quraan\\Desktop\\Bayan\\OnlineTutorManagementSystem\\Controllers\\TeacherServiceController.cs",
+              "RelativeToolTip": "Controllers\\TeacherServiceController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T04:15:08.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeacherReposController.cs",
+              "DocumentMoniker": "C:\\Users\\m.quraan\\Desktop\\Bayan\\OnlineTutorManagementSystem\\Controllers\\TeacherReposController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeacherReposController.cs",
+              "ToolTip": "C:\\Users\\m.quraan\\Desktop\\Bayan\\OnlineTutorManagementSystem\\Controllers\\TeacherReposController.cs",
+              "RelativeToolTip": "Controllers\\TeacherReposController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T04:15:03.429Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

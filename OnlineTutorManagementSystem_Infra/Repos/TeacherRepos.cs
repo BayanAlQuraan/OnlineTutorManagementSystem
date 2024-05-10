@@ -5,6 +5,8 @@ using OnlineTutorManagmentSystem_Core.Context;
 using OnlineTutorManagmentSystem_Core.Dtos.Certificate;
 using OnlineTutorManagmentSystem_Core.Dtos.Class;
 using OnlineTutorManagmentSystem_Core.Dtos.Evaluation;
+using OnlineTutorManagmentSystem_Core.Dtos.Invoice;
+using OnlineTutorManagmentSystem_Core.Dtos.Login;
 using OnlineTutorManagmentSystem_Core.Dtos.Student;
 using OnlineTutorManagmentSystem_Core.Dtos.Subject;
 using OnlineTutorManagmentSystem_Core.IRepos;
@@ -374,7 +376,6 @@ namespace OnlineTutorManagementSystem_Infra.Repos
                 subject.Name = dto.Name;
                 subject.Number = dto.Number;
                 subject.Description = dto.Description;
-                subject.Teacher = await _context.Teachers.FindAsync(dto.TeacherId);
                 _context.Subjects.Add(subject);
                 if (await _context.SaveChangesAsync() > 0)
                 {
@@ -532,7 +533,6 @@ namespace OnlineTutorManagementSystem_Infra.Repos
                 evaluation.AssignmentsMark = dto.AssignmentsMark;
                 evaluation.Score = dto.QuzziesMark + dto.AttendanceMark + dto.ParticipantsMark + dto.AssignmentsMark;
                 var tStudent = await _context.Students.FindAsync(dto.StudentId);
-                var tTeacher = await _context.Teachers.FindAsync(dto.TeacherId);
 
                 if(tStudent == null)
                 {
@@ -541,16 +541,7 @@ namespace OnlineTutorManagementSystem_Infra.Repos
                     responseMessage.ErrorMessage = "There is no student associated to this student id";
                     return responseMessage;
                 }
-
-                if (tTeacher == null)
-                {
-                    responseMessage.Result = eResult.Failed;
-                    responseMessage.ErrorCode = ErrorCode.GeneralError;
-                    responseMessage.ErrorMessage = "There is no teacher associated to this teacher id";
-                    return responseMessage;
-                }
                 evaluation.Student = tStudent;
-                evaluation.Teacher = tTeacher;
                 _context.Evaluations.Add(evaluation);
                 if (await _context.SaveChangesAsync() > 0)
                 {
@@ -671,6 +662,106 @@ namespace OnlineTutorManagementSystem_Infra.Repos
             {
                 Logger.LogError(ex);
                 return new ResponseMessage(ex);
+            }
+        }
+
+        // Other Services ( need to rename )
+        public async Task<ResponseMessage> GenerateStudentInvoice(InvoiceInfoDTO dto)
+        {
+            try
+            {
+                ResponseMessage responseMessage = new ResponseMessage();
+                Invoice invoice = new Invoice();
+                invoice.Amount = dto.Amount;
+                invoice.Details = dto.Details;
+                invoice.CreationDate = DateTime.Now;
+                invoice.Status = (int)InvoiceStatus.UnPaid;
+                invoice.Student = await _context.Students.FindAsync(dto.StudentId);
+                if (invoice.Student != null)
+                {
+                    await _context.Invoices.AddAsync(invoice);
+                    if (await _context.SaveChangesAsync() > 0)
+                    {
+                        responseMessage.Result = eResult.Success;
+                    }
+                    else
+                    {
+                        responseMessage.Result = eResult.Failed;
+                        responseMessage.ErrorCode = ErrorCode.GeneralError;
+                        responseMessage.ErrorMessage = "Faild to generate student invoice";
+                    }
+                }
+                else
+                {
+                    responseMessage.Result = eResult.NotFound;
+                    responseMessage.ErrorCode = ErrorCode.NotFound;
+                    responseMessage.ErrorMessage = "There is no student found associated to this student id";
+                }
+                return responseMessage;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return new ResponseMessage(ex);
+            }
+        }
+        public async Task<ResponseMessage> GrantStudentToGetCetificate(int StudentId, int SubjectId)
+        {
+            try
+            {
+                ResponseMessage responseMessage = new ResponseMessage();
+                Certificate certificate = new Certificate();
+                certificate.Student = await _context.Students.FindAsync(StudentId);
+                certificate.Subject = await _context.Subjects.FindAsync(SubjectId);
+                if (certificate.Student != null)
+                {
+                    certificate.Name = certificate.Subject.Name + "-" + SubjectId;
+                    certificate.Description = certificate.Subject.Description;
+                    await _context.Certificates.AddAsync(certificate);
+                    if (await _context.SaveChangesAsync() > 0)
+                    {
+                        responseMessage.Result = eResult.Success;
+                    }
+                    else
+                    {
+                        responseMessage.Result = eResult.Failed;
+                        responseMessage.ErrorCode = ErrorCode.GeneralError;
+                        responseMessage.ErrorMessage = "Faild to grant student to get certificate";
+                    }
+                }
+                else
+                {
+                    responseMessage.Result = eResult.NotFound;
+                    responseMessage.ErrorCode = ErrorCode.NotFound;
+                    responseMessage.ErrorMessage = "There is no student associated to this student id";
+                }
+                return responseMessage;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return new ResponseMessage(ex);
+            }
+        }
+        public async Task<AdminUser> Login(LoginReqDTO dto)
+        {
+            try
+            {
+                // TODO::
+                if(dto.Email.ToLowerInvariant().Equals("admin") && dto.Password.Equals("123"))
+                {
+                    AdminUser adminUser = new AdminUser();
+                    adminUser.Id = 1;
+                    adminUser.Email = dto.Email;
+                    adminUser.Password = dto.Password;
+                    return adminUser;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
             }
         }
     }

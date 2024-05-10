@@ -147,14 +147,9 @@ namespace OnlineTutorManagementSystem_Core.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("StudentId");
-
-                    b.HasIndex("TeacherId");
 
                     b.ToTable("Evaluations", null, t =>
                         {
@@ -334,63 +329,11 @@ namespace OnlineTutorManagementSystem_Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TeacherId");
 
                     b.ToTable("Subjects", null, t =>
                         {
                             t.HasCheckConstraint("Ch_Subject_Name", "len(Name)>2");
-                        });
-                });
-
-            modelBuilder.Entity("OnlineTutorManagmentSystem_Core.Models.Entities.Teacher", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.HasIndex("PhoneNumber")
-                        .IsUnique();
-
-                    b.ToTable("Teachers", null, t =>
-                        {
-                            t.HasCheckConstraint("CH_Teacher_Email", "Email Like '%@gmail.com%' Or Email Like  '%@outlook.com%' or Email Like '%@yahoo.com%'");
-
-                            t.HasCheckConstraint("Ch_Teacher_Name", "len(Name)>2");
-
-                            t.HasCheckConstraint("Ch_Teacher_PhoneNumber", "(len([PhoneNumber])=(10) AND ([PhoneNumber] like '079%' OR [PhoneNumber] like '078%' OR [PhoneNumber] like '077%'))");
                         });
                 });
 
@@ -432,15 +375,7 @@ namespace OnlineTutorManagementSystem_Core.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OnlineTutorManagmentSystem_Core.Models.Entities.Teacher", "Teacher")
-                        .WithMany("Evaluations")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Student");
-
-                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("OnlineTutorManagmentSystem_Core.Models.Entities.Invoice", b =>
@@ -488,17 +423,6 @@ namespace OnlineTutorManagementSystem_Core.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("OnlineTutorManagmentSystem_Core.Models.Entities.Subject", b =>
-                {
-                    b.HasOne("OnlineTutorManagmentSystem_Core.Models.Entities.Teacher", "Teacher")
-                        .WithMany("Subjects")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Teacher");
-                });
-
             modelBuilder.Entity("OnlineTutorManagmentSystem_Core.Models.Entities.Class", b =>
                 {
                     b.Navigation("StudentClasses");
@@ -528,13 +452,6 @@ namespace OnlineTutorManagementSystem_Core.Migrations
                     b.Navigation("Certificates");
 
                     b.Navigation("Classes");
-                });
-
-            modelBuilder.Entity("OnlineTutorManagmentSystem_Core.Models.Entities.Teacher", b =>
-                {
-                    b.Navigation("Evaluations");
-
-                    b.Navigation("Subjects");
                 });
 #pragma warning restore 612, 618
         }

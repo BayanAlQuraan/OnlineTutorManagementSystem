@@ -16,6 +16,5 @@ namespace OnlineTutorManagmentSystem_Core.Dtos.Evaluation
         public double AssignmentsMark { get; set; }
         public string Feedback { get; set; }
         public int StudentId { get; set; }
-        public int TeacherId { get; set;}
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj": {}
+    "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj": {
+    "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj",
+        "projectUniqueName": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj",
         "projectName": "OnlineTutorManagementSystem_Core",
-        "projectPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj",
+        "projectPath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj",
         "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\obj\\",
+        "outputPath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -20,7 +20,6 @@ namespace OnlineTutorManagmentSystem_Core.Context
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new PaymentEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new InvoiceEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new TeacherEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ClassEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new SubjectEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new StudentEntityTypeConfiguration());
@@ -30,7 +29,6 @@ namespace OnlineTutorManagmentSystem_Core.Context
         }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<Class> Classes { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<Student> Students { get; set; }

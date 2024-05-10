@@ -13,7 +13,6 @@ namespace OnlineTutorManagmentSystem_Core.Models.Entities
         public string Number { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public virtual Teacher Teacher { get; set; }
         public virtual List<Class> Classes { get; set; }
         public virtual List<Certificate> Certificates { get; set; }
         

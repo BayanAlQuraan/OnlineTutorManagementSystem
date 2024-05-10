@@ -17,7 +17,5 @@ namespace OnlineTutorManagmentSystem_Core.Models.Entities
         public double ParticipantsMark { get; set; }
         public double AssignmentsMark { get; set; }
         public virtual Student Student { get; set; }
-        public virtual Teacher Teacher { get; set; }
-
     }
 }

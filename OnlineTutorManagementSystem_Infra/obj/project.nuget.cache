@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hamVOop5ejumwNzFS9Q/Fba97krXmE60sJyfWNfB071nsfiA3xEDsQR6wPqmpYvv2OeK85zuL54lAXVwOeFu0w==",
+  "dgSpecHash": "IU2qMSx1L6GwVaKvdEWnDCVwF8fuTgo5WKeG3ciafkjCXjgUG8JH8ePz3jpJGIBUIqE4AkklgpP7bAj1IFkRXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Infra\\OnlineTutorManagementSystem_Infra.csproj",
+  "projectFilePath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Infra\\OnlineTutorManagementSystem_Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

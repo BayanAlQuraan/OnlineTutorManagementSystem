@@ -1,0 +1,1 @@
+{"Timestamp":"2024-05-10T16:49:17.6222878+03:00","Level":"Information","MessageTemplate":"Application Has been Started"}

@@ -5369,11 +5369,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem.csproj",
+      "projectUniqueName": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem.csproj",
       "projectName": "OnlineTutorManagementSystem",
-      "projectPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem.csproj",
+      "projectPath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem\\obj\\",
+      "outputPath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5390,11 +5390,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj": {
-              "projectPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj"
+            "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj": {
+              "projectPath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Core\\OnlineTutorManagementSystem_Core.csproj"
             },
-            "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Infra\\OnlineTutorManagementSystem_Infra.csproj": {
-              "projectPath": "C:\\Users\\moham\\OneDrive\\Desktop\\Bayan\\OnlineTutorManagementSystem_Infra\\OnlineTutorManagementSystem_Infra.csproj"
+            "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Infra\\OnlineTutorManagementSystem_Infra.csproj": {
+              "projectPath": "D:\\Bayan_git\\New\\OnlineTutorManagementSystem\\OnlineTutorManagementSystem_Infra\\OnlineTutorManagementSystem_Infra.csproj"
             }
           }
         }

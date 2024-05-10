@@ -1,6 +1,8 @@
 ﻿using OnlineTutorManagementSystem_Core.Models.Shared;
 using OnlineTutorManagmentSystem_Core.Dtos.Class;
 using OnlineTutorManagmentSystem_Core.Dtos.Evaluation;
+using OnlineTutorManagmentSystem_Core.Dtos.Invoice;
+using OnlineTutorManagmentSystem_Core.Dtos.Login;
 using OnlineTutorManagmentSystem_Core.Dtos.Student;
 using OnlineTutorManagmentSystem_Core.Dtos.Subject;
 
@@ -15,14 +17,11 @@ namespace OnlineTutorManagmentSystem_Core.IRepos
         Task<ResponseMessage> UpdateClass(UpdateClassDTO dto);
         Task<ResponseMessage> DeleteClass(int ClassId);
 
-
-
         //Student Management
         Task<ResponseMessage> GetAllStudents();
         Task<ResponseMessage> GetStudentById(int StudentId);
         Task<ResponseMessage> UpdateStudent(UpdateStudentDTO dto);
         Task<ResponseMessage> DeleteStudent(int StudentId);
-
 
         //Subject Management
         Task<ResponseMessage> GetAllSubjects();
@@ -40,6 +39,14 @@ namespace OnlineTutorManagmentSystem_Core.IRepos
 
         // View Studnet Cert
         Task<ResponseMessage> ViewStudnetCertificate(int StudentId, int SubjectId);
+
+        // Other Services
+        Task<AdminUser> Login(LoginReqDTO dto);
+        //GenerateStudentInvoice
+        Task<ResponseMessage> GenerateStudentInvoice(InvoiceInfoDTO dto);
+        // Grant Student To Get Cert
+        Task<ResponseMessage> GrantStudentToGetCetificate(int StudentId, int SubjectId);
+
     }
 
 }

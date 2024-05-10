@@ -74,6 +74,56 @@
             To reset the student account password.
             </summary>
         </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.DeleteAccount(System.Int32)">
+            <summary>
+            To delete student account by passing the student id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.GetAllCertificates(System.Int32)">
+            <summary>
+            To get all student certificates by passing the student id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.GetCertificateById(System.Int32)">
+            <summary>
+            To get one certificate by passing the certificate id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.LeaveClass(System.Int32,System.Int32)">
+            <summary>
+            To leave a specific class by passing the student and class ids.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.RegisterToClass(System.Int32,System.Int32)">
+            <summary>
+            To join into a specific class by passing the student and class ids.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.UpdateProfile(OnlineTutorManagmentSystem_Core.Dtos.Account.UpdateProfileDTO)">
+            <summary>
+            To update the student account information.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.ViewEvaluation(System.Int32)">
+            <summary>
+            To view the student evaluation by passing the evaluation id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.ViewInvoiceById(System.Int32)">
+            <summary>
+            To view a specific student invocie by passing the invoiceId id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.ViewSchedule(System.Int32)">
+            <summary>
+            To view a specific student schedule by passing the student id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.StudentServiceController.GetStudentInvoices(System.Int32)">
+            <summary>
+            To view a specific student invocies by passing the student id.
+            </summary>
+        </member>
         <member name="M:OnlineTutorManagementSystem.Controllers.TeacherReposController.GetAllClasses">
             <summary>
             To get all classes.
@@ -187,6 +237,106 @@
         <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GrantStudentToGetCetificate(System.Int32,System.Int32)">
             <summary>
             To allow a specific student to get a subject certificate.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetAllClasses">
+            <summary>
+            To get all classes.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetClassById(System.Int32)">
+            <summary>
+            To get a specific class by passing class id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.CreateClass(OnlineTutorManagmentSystem_Core.Dtos.Class.CreateClassDTO)">
+            <summary>
+            To create a new class for specific subject.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.UpdateClass(OnlineTutorManagmentSystem_Core.Dtos.Class.UpdateClassDTO)">
+            <summary>
+            To update a specific class.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.DeleteClass(System.Int32)">
+            <summary>
+            To delete a specific class by passing class id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetAllStudents">
+            <summary>
+            To get all students.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetStudentById(System.Int32)">
+            <summary>
+            To get a specific student info by passing student id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.UpdateStudent(OnlineTutorManagmentSystem_Core.Dtos.Student.UpdateStudentDTO)">
+            <summary>
+            To update a specific student info.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.DeleteStudent(System.Int32)">
+            <summary>
+            To update a specific student from the system by passing student id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetAllSubjects">
+            <summary>
+            To get all subjects.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetSubjectById(System.Int32)">
+            <summary>
+            To get a specific subject info by passing subject id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.CreateSubject(OnlineTutorManagmentSystem_Core.Dtos.Subject.CreateSubjectDTO)">
+            <summary>
+            To create a new subject.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.UpdateSubject(OnlineTutorManagmentSystem_Core.Dtos.Subject.UpdateSubjectDTO)">
+            <summary>
+            To update a specific subject.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.DeleteSubject(System.Int32)">
+            <summary>
+            To delete a specific subject from the system by passing subject id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetAllEvaluations">
+            <summary>
+            To get all evaluations.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.GetEvaluationById(System.Int32)">
+            <summary>
+            To get a specific evaluation by passing evaluation id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.CreateEvaluation(OnlineTutorManagmentSystem_Core.Dtos.Evaluation.CreateEvaluationDTO)">
+            <summary>
+            To create a new evaluation.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.UpdateEvaluation(OnlineTutorManagmentSystem_Core.Dtos.Evaluation.UpdateEvaluationDTO)">
+            <summary>
+            To update a specific evaluation info.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.DeleteEvaluation(System.Int32)">
+            <summary>
+            To delete a specific evaluation by passing evaluation id.
+            </summary>
+        </member>
+        <member name="M:OnlineTutorManagementSystem.Controllers.TeacherServiceController.ViewStudnetCertificate(System.Int32,System.Int32)">
+            <summary>
+            To get a specific studnet certificate on specific subject.
             </summary>
         </member>
     </members>

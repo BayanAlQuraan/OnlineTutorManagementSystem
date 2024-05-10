@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineTutorManagementSystem_Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbefa7afa697e59131a14755121af92d8c776b42")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineTutorManagementSystem_Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineTutorManagementSystem_Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
